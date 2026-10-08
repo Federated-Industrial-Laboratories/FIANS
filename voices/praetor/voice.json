@@ -1,0 +1,14 @@
+{
+  "name": "Praetor",
+  "version": "1.0.0",
+  "engine": "Chatterbox Nano",
+  "model_revision": "71ccd1d0081b430592cea481f4307e764e07bc64",
+  "assets": {
+    "reference.wav": "1971ae64b83c2b3b3d35ea58d495a2b0b29f05accf343e85274f4926cfe64764",
+    "preset.json": "fd78b408eb1492d6050308e6f405fd424c1ca18fbcb939e964e383bc1af6b3f9"
+  },
+  "device": "cpu",
+  "threads": 4,
+  "seed": 42,
+  "id": "praetor"
+}

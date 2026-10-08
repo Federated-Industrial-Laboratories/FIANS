@@ -1,0 +1,56 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contracts-and-docs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Application contracts
+        env:
+          PYTHONPATH: src
+        run: python -m unittest discover -s tests
+      - name: Manual links and local artwork
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          import urllib.parse
+          import xml.etree.ElementTree as ET
+
+          root = Path.cwd()
+          documents = list(root.glob('*.md')) + list((root / 'docs').rglob('*.md'))
+          checked = 0
+          for document in documents:
+              content = document.read_text()
+              targets = re.findall(r'\[[^\]]*\]\(([^\s)]+)\)', content)
+              targets += re.findall(r'(?:src|href)="([^"]+)"', content)
+              for target in targets:
+                  parsed = urllib.parse.urlsplit(target)
+                  if parsed.scheme or parsed.netloc:
+                      continue
+                  path = (document.parent / urllib.parse.unquote(parsed.path)).resolve() if parsed.path else document
+                  assert path.is_relative_to(root), f'{document}: link leaves repository: {target}'
+                  assert path.exists(), f'{document}: missing link: {target}'
+                  if parsed.fragment and path.suffix == '.md':
+                      headings = re.findall(r'^#{1,6}\s+(.+)$', path.read_text(), re.M)
+                      anchors = {re.sub(r'[^\w\- ]', '', heading.lower()).replace(' ', '-') for heading in headings}
+                      assert parsed.fragment in anchors, f'{document}: missing heading: {target}'
+                  checked += 1
+          for path in (root / '.github/assets').glob('*.svg'):
+              ET.parse(path)
+          print(f'Checked {checked} local links and SVG syntax.')
+          PY

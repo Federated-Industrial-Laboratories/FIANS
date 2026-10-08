@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="488" viewBox="0 0 720 244" role="img" aria-labelledby="title desc">
+  <!-- SPDX-License-Identifier: Apache-2.0 -->
+  <title id="title">FIANS</title>
+  <desc id="desc">Federated Industrial Authoritative Narration System. A silver signal disc and amber waveform on an engineering grid.</desc>
+  <defs>
+    <linearGradient id="panel" x2="0" y2="1"><stop stop-color="#f8fafb"/><stop offset="1" stop-color="#dce2e7"/></linearGradient>
+    <linearGradient id="metal" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".48" stop-color="#adbcc7"/><stop offset=".65" stop-color="#f2f5f7"/><stop offset="1" stop-color="#8396a6"/></linearGradient>
+    <linearGradient id="amber" x2="0" y2="1"><stop stop-color="#ffcb78"/><stop offset="1" stop-color="#cb6a12"/></linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#8194a3" stroke-opacity=".13" stroke-width=".65"/></pattern>
+  </defs>
+  <rect x=".5" y=".5" width="719" height="243" rx="3" fill="url(#panel)" stroke="#acbac4"/>
+  <rect x="1" y="1" width="718" height="242" fill="url(#grid)"/>
+  <path d="M18 18h18M18 18v18M702 18h-18M702 18v18M18 226h18M18 226v-18M702 226h-18M702 226v-18" fill="none" stroke="#8c9da9"/>
+  <path d="M0 205h720M0 207h720" stroke="#c3cdd5"/>
+  <circle cx="120" cy="110" r="72" fill="#8396a6" opacity=".14"/>
+  <circle cx="118" cy="105" r="70" fill="url(#metal)" stroke="#7c91a1"/>
+  <circle cx="118" cy="105" r="59" fill="#edf2f5" stroke="#fefefe" stroke-width="2"/>
+  <circle cx="118" cy="105" r="48" fill="#364855" stroke="#637b8c"/>
+  <path d="M74 106h11l6-17 9 42 10-71 11 91 10-70 10 41 9-17h12" fill="none" stroke="#172933" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 2)"/>
+  <path d="M74 104h11l6-17 9 42 10-71 11 91 10-70 10 41 9-17h12" fill="none" stroke="url(#amber)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#566d7e"><circle cx="118" cy="42" r="2"/><circle cx="181" cy="105" r="2"/><circle cx="118" cy="168" r="2"/><circle cx="55" cy="105" r="2"/></g>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="221" y="56" font-size="9" letter-spacing="3" fill="#6d7f8c">FEDERATED INDUSTRIAL LABORATORIES</text>
+    <text x="215" y="124" font-size="72" font-weight="700" letter-spacing="8" fill="#bac5cd">FIANS</text>
+    <text x="215" y="121" font-size="72" font-weight="700" letter-spacing="8" fill="#354754">FIANS</text>
+    <path d="M221 139h62l6 5h-68z" fill="#d97706"/>
+    <text x="222" y="163" font-size="12" fill="#536876">Federated Industrial Authoritative Narration System</text>
+    <text x="32" y="226" font-size="9" letter-spacing="2.3" fill="#526776">LOCAL SPEECH / PRAETOR VOICE</text>
+    <text x="688" y="226" font-size="9" text-anchor="end" letter-spacing="1.8" fill="#526776">OFFLINE INFERENCE</text>
+  </g>
+</svg>

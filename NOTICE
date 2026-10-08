@@ -1,0 +1,15 @@
+FIANS - Federated Industrial Authoritative Narration System
+
+FIANS application code and the authored Praetor effect preset are distributed
+under the Apache License, Version 2.0. See LICENSE.
+
+Chatterbox and Perth are separate upstream components with retained MIT notices.
+The Chatterbox Nano model card declares MIT for the base weights. See notices/
+and docs/dependencies.md for component revisions and licence texts.
+
+Praetor combines a supplied synthetic reference with an authored sound treatment.
+Its reference audio and asset hashes are identified in voices/praetor/voice.json.
+The profile is inference conditioning, not a separately trained Nano checkpoint.
+
+Python runtime dependencies, FFmpeg and Rubber Band retain their respective
+licences. They are separate from the FIANS application licence.

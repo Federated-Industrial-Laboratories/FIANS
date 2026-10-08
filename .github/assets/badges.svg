@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 28" role="img" aria-label="Apache 2.0 application, version 0.1.0, Linux x86-64, Praetor voice">
+  <!-- SPDX-License-Identifier: Apache-2.0 -->
+  <g font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="middle">
+    <g><path d="M0 0h191v28H0z" fill="#49555f"/><path d="M80 0h111v28H80z" fill="#e58b24"/><text x="40" y="18" fill="#fff">Application</text><text x="135.5" y="18" fill="#18222b">Apache-2.0</text></g>
+    <g transform="translate(199)"><path d="M0 0h151v28H0z" fill="#49555f"/><path d="M76 0h75v28H76z" fill="#e58b24"/><text x="38" y="18" fill="#fff">Version</text><text x="113.5" y="18" fill="#18222b">0.1.0</text></g>
+    <g transform="translate(358)"><path d="M0 0h200v28H0z" fill="#49555f"/><path d="M74 0h126v28H74z" fill="#e58b24"/><text x="37" y="18" fill="#fff">Platform</text><text x="137" y="18" fill="#18222b">Linux x86-64</text></g>
+    <g transform="translate(566)"><path d="M0 0h154v28H0z" fill="#49555f"/><path d="M64 0h90v28H64z" fill="#e58b24"/><text x="32" y="18" fill="#fff">Voice</text><text x="109" y="18" fill="#18222b">Praetor</text></g>
+  </g>
+</svg>

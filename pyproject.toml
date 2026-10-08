@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.46.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fians"
+version = "0.1.0"
+description = "Federated Industrial Authoritative Narration System"
+requires-python = ">=3.12,<3.13"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.scripts]
+fians = "fians.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Federated-Industrial-Laboratories/FIANS"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/fians/voices/praetor" = ["voices/praetor/reference.wav", "voices/praetor/preset.json", "voices/praetor/voice.json"]
+"share/fians/models" = ["models/manifest.json"]
+"share/fians/notices" = ["notices/Chatterbox-MIT.txt", "notices/Perth-MIT.txt", "notices/Nano-model-card.md"]
